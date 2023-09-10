@@ -1,0 +1,15 @@
+{
+  "name": "ts-learn",
+  "version": "1.0.0",
+  "description": "This is repo to track ts learn",
+  "main": "index.js",
+  "scripts": {},
+  "keywords": [
+    "TypeScript"
+  ],
+  "author": "Aakash",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^1.5.0"
+  }
+}
