@@ -1,14 +1,21 @@
 "use strict";
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
 Object.defineProperty(exports, "__esModule", { value: true });
-var axios_1 = require("axios");
-var URL = 'https://jsonplaceholder.typicode.com/posts/1';
-axios_1.default.get(URL).then(function (res) {
-    var response = res.data;
-    var USERID = response.userId;
-    var ID = response.id;
-    var TITLE = response.title;
+const axios_1 = __importDefault(require("axios"));
+const URL = 'https://jsonplaceholder.typicode.com/posts/1';
+axios_1.default.get(URL).then(res => {
+    const response = res.data;
+    const USERID = response.userId;
+    const ID = response.id;
+    const TITLE = response.title;
     getPost(USERID, ID, TITLE);
 });
-var getPost = function (userId, id, title) {
-    console.log("\n  UserID: ".concat(userId, "\n  Id: ").concat(id, "\n  Title: ").concat(title, "\n  "));
+const getPost = (userId, id, title) => {
+    console.log(`
+  UserID: ${userId}
+  Id: ${id}
+  Title: ${title}
+  `);
 };
